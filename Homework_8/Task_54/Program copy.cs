@@ -1,4 +1,4 @@
-﻿//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+﻿//Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 int[,] RandomMatrixCreator()
 {
     int y=new Random().Next(2, 10);
@@ -33,10 +33,10 @@ double[] CollumnAverege(int[,] matrix)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-             tempSum=tempSum+matrix[i,j];
+             tempSum=tempSumx+matrix[i,j];
         }
 
-        average[j]=tempSum/matrix.GetLength(0);
+        average[j]=tempSum;
         tempSum=0;
     }
     return average;
@@ -50,5 +50,5 @@ for (int i = 0; i < array.GetLength(0); i++)
 }
 int [,] randomMatrix=RandomMatrixCreator();
 PrintMatrix(randomMatrix);
-Console.WriteLine("Среднее столбцов:");
+Console.WriteLine("Суммы столбцов:");
 AveragePrint(CollumnAverege(randomMatrix));
