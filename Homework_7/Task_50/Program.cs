@@ -24,6 +24,7 @@ void PrintMatrix(int[,] matr)
         }
         Console.WriteLine();
     }
+    return;
 }
 void NumberSeeker(int[,] matr,int num)
 {   
